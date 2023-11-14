@@ -28,3 +28,14 @@ with open('data.json','r') as json_file:
 
 print("Successfully able to read data.json")
 print(loaded_data)
+
+#
+loaded_data['age'] = 34
+loaded_data['interests'].append('Mini Golfing')
+
+#
+with open('data.json', 'w') as json_file:
+
+    json.dump(loaded_data, json_file, indent=4)
+
+    print('Modified data written to data.json')
